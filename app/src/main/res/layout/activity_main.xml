@@ -15,12 +15,12 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:hint="Açıklama"
-        app:hintTextColor="#FF5722"
+        app:hintTextColor="@color/acik_turuncu"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
-        app:boxStrokeColor="#FF5722"
+        app:boxStrokeColor="@color/acik_turuncu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -44,8 +44,8 @@
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
-        app:boxStrokeColor="#FF5722"
-        app:hintTextColor="#FF5722"
+        app:boxStrokeColor="@color/acik_turuncu"
+        app:hintTextColor="@color/acik_turuncu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
@@ -64,7 +64,10 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
-
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
         <RadioButton
             android:id="@+id/radioButtonFatura"
             android:layout_width="wrap_content"
@@ -88,15 +91,17 @@
             android:text="Diğer"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
             app:layout_constraintTop_toBottomOf="@+id/radioButtonDolar" />
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:divider="@drawable/divider"
         android:orientation="horizontal"
         android:showDividers="middle"
-        android:divider="@drawable/divider"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -133,4 +138,18 @@
             app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
             app:layout_constraintTop_toBottomOf="@+id/radioButtonDolar" />
     </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:text="Ekle"
+        android:paddingRight="10dp"
+        android:paddingLeft="5dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_custom"
+        android:drawableLeft="@android:drawable/ic_menu_add"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
